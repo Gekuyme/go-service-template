@@ -1,4 +1,3 @@
-
 # Go Gin Template
 
 A clean and modular template for building microservices with Golang, Gin, PostgreSQL, and Docker. This template follows Clean Architecture principles, making it easy to extend, test, and maintain.
@@ -26,26 +25,22 @@ A clean and modular template for building microservices with Golang, Gin, Postgr
    git clone https://github.com/yourusername/go-gin-template.git
    cd go-gin-template
    ```
-
 2. Create a `.env` file based on the example `.env.example`:
 
    ```bash
    cp .env.example .env
    ```
-
 3. Build and run the application with Docker:
 
    ```bash
    docker-compose up --build
    ```
-
 4. Access the application at `http://localhost:8080`.
 
 ### Project Structure
 
 The project is organized based on Clean Architecture principles, separating the business logic from delivery and data access layers.
 
-- **`cmd/`**: Main entry point for the application.
 - **`internal/domain/`**: Contains core business logic and entities.
 - **`internal/usecase/`**: Application use cases or services that interact with domain models.
 - **`internal/repository/`**: Implements data access and repository patterns.
@@ -56,7 +51,7 @@ The project is organized based on Clean Architecture principles, separating the 
 ### Usage
 
 - **Endpoints**: Modify or extend handlers in `internal/delivery/http/handler.go`.
-- **Database Migrations**: Manage database schema changes in the `migrations` folder (to be created if needed).
+- **Database Migrations**: Manage database schema changes in the `InitDB` folder (to be created if needed).
 
 ### Environment Variables
 
